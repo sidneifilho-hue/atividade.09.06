@@ -79,3 +79,20 @@ footer {
     padding: 15px;
     border-top: 2px solid #7b2cbf;
 }
+
+.botao {
+    background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #9d4edd;
+}
