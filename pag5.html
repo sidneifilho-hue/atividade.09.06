@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Filmes</title>
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Buscar filmes</div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar filme...">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Encontre seu próximo filme</h1>
+            <p>Pesquise entre milhares de títulos disponíveis.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <h2>Filmes Populares</h2>
+
+        <div class="movies" id="movies">
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg">
+                <h3>Duna: Parte Dois</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/9l1eZiJHmhr5jIlthMdJN5WYoff.jpg">
+                <h3>Deadpool & Wolverine</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg">
+                <h3>Gladiador II</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/xkjWiRQtrenqGRWO2Enry2JIl4d.jpg">
+                <h3>Wicked</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg">
+                <h3>Oppenheimer</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/7VEUOEfRzzrQfWddlIyLUKvh6Nf.jpg">
+                <h3>Furiosa</h3>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.movie-card');
+
+        searchInput.addEventListener('keyup', () => {
+            const search = searchInput.value.toLowerCase();
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+
+                if(title.includes(search)){
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
