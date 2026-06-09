@@ -81,6 +81,9 @@ footer {
 }
 
 .botao {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
     background: linear-gradient(90deg, #7b2cbf, #9d4edd);
     color: white;
     border: none;
