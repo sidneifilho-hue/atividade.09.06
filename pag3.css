@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #c77dff;
+    margin-bottom: 15px;
+}
+
+.personagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: 2px solid #7b2cbf;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #e0aaff;
+    margin-bottom: 10px;
+}
+
+.curiosidades ul {
+    margin-left: 20px;
+}
+
+.curiosidades li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #7b2cbf;
+}
