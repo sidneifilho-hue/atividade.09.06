@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f171e;
+    color:white;
+}
+
+header{
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00a8e1;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00a8e1;
+}
+
+.search-box{
+    display:flex;
+}
+
+.search-box input{
+    padding:10px;
+    width:250px;
+    border:none;
+    outline:none;
+    border-radius:6px 0 0 6px;
+}
+
+.search-box button{
+    border:none;
+    background:#00a8e1;
+    color:white;
+    padding:0 15px;
+    cursor:pointer;
+    border-radius:0 6px 6px 0;
+}
+
+.hero{
+    height:500px;
+    background:
+    linear-gradient(rgba(0,0,0,.5),
+    rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1920");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:20px;
+    color:#ddd;
+}
+
+main{
+    padding:40px 5%;
+}
+
+main h2{
+    margin-bottom:25px;
+}
+
+.movies{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:25px;
+}
+
+.movie-card{
+    background:#1b2530;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.movie-card:hover{
+    transform:scale(1.05);
+}
+
+.movie-card img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+}
+
+.movie-card h3{
+    padding:15px;
+    text-align:center;
+}
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .search-box input{
+        width:180px;
+    }
+}
