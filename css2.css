@@ -11,135 +11,74 @@ body{
 }
 
 header{
-    background:#111827;
+    background:#131a22;
+    padding:20px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:15px 5%;
-    position:sticky;
-    top:0;
-    z-index:100;
+    gap:20px;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#00a8e1;
+h1{
+    color:#00A8E1;
 }
 
-nav{
-    display:flex;
-    gap:25px;
-}
-
-nav a{
+.btn-voltar{
+    background:#00A8E1;
     color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#00a8e1;
-}
-
-.search-box{
-    display:flex;
-}
-
-.search-box input{
-    padding:10px;
-    width:250px;
     border:none;
-    outline:none;
-    border-radius:6px 0 0 6px;
-}
-
-.search-box button{
-    border:none;
-    background:#00a8e1;
-    color:white;
-    padding:0 15px;
+    padding:10px 20px;
+    border-radius:5px;
     cursor:pointer;
-    border-radius:0 6px 6px 0;
+    font-size:16px;
 }
 
-.hero{
-    height:500px;
-    background:
-    linear-gradient(rgba(0,0,0,.5),
-    rgba(0,0,0,.7)),
-    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1920");
-    background-size:cover;
-    background-position:center;
+.btn-voltar:hover{
+    background:#0085b3;
+}
+
+.catalogo{
     display:flex;
-    align-items:center;
-    padding:0 8%;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:40px;
 }
 
-.hero-content h1{
-    font-size:60px;
-    margin-bottom:15px;
-}
-
-.hero-content p{
-    font-size:20px;
-    color:#ddd;
-}
-
-main{
-    padding:40px 5%;
-}
-
-main h2{
-    margin-bottom:25px;
-}
-
-.movies{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    gap:25px;
-}
-
-.movie-card{
+.card{
     background:#1b2530;
+    width:250px;
     border-radius:10px;
     overflow:hidden;
-    transition:.3s;
-    cursor:pointer;
+    text-align:center;
+    transition:0.3s;
 }
 
-.movie-card:hover{
+.card:hover{
     transform:scale(1.05);
 }
 
-.movie-card img{
+.card img{
     width:100%;
-    height:330px;
+    height:350px;
     object-fit:cover;
 }
 
-.movie-card h3{
+.card h2{
     padding:15px;
-    text-align:center;
+    font-size:22px;
 }
 
-@media(max-width:900px){
+.card button{
+    margin-bottom:20px;
+    background:#00A8E1;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
 
-    header{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero-content h1{
-        font-size:40px;
-    }
-
-    .search-box input{
-        width:180px;
-    }
+.card button:hover{
+    background:#0085b3;
 }
