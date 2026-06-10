@@ -3,93 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Filmes</title>
-    <link rel="stylesheet" href="css2.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Buscar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">Buscar filmes</div>
-
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Buscar filme...">
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </div>
+        <button class="btn-voltar" onclick="history.back()">← Voltar</button>
+        <h1>Clube dos Filmes</h1>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Encontre seu próximo filme</h1>
-            <p>Pesquise entre milhares de títulos disponíveis.</p>
+    <main class="catalogo">
+
+        <div class="card">
+            <img src="img/strangerthings.jpg" alt="Stranger Things">
+            <h2>Stranger Things</h2>
+            <a href="https://www.netflix.com/br/title/80057281" target="_blank">
+                <button>Detalhes</button>
+            </a>
         </div>
-    </section>
 
-    <main>
+        <div class="card">
+            <img src="img/skins.jpg" alt="Skins">
+            <h2>Skins</h2>
+            <a href="#" target="_blank">
+                <button>Detalhes</button>
+            </a>
+        </div>
 
-        <h2>Filmes Populares</h2>
+        <div class="card">
+            <img src="img/lacasadepapel.jpg" alt="La Casa de Papel">
+            <h2>La Casa de Papel</h2>
+            <a href="https://www.netflix.com/br/title/80192098" target="_blank">
+                <button>Detalhes</button>
+            </a>
+        </div>
 
-        <div class="movies" id="movies">
+        <div class="card">
+            <img src="img/deadpoolwolverine.jpg" alt="Deadpool e Wolverine">
+            <h2>Deadpool e Wolverine</h2>
+            <a href="#" target="_blank">
+                <button>Detalhes</button>
+            </a>
+        </div>
 
-            <div class="movie-card">
-                <img src="../img/skins.jpg" alt="Skins">
-                <h3>Skins</h3>
-                <nav>
-        <a href="pag 3.html">Buscar</a>
-    </nav>
-            </div>
-
-            <div class="movie-card">
-                <img src="img/lacasadepapel.jpg" alt="La Casa de Papel">
-                <h3>la Casa de Papel</h3>
-                <nav>
-        <a href="pag4.html">Buscar</a>
-    </nav>
-            </div>
-
-            <div class="movie-card">
-                <img src="img/strangerthings.jpg" alt="Stranger Things">
-                <h3>Stranger Things</h3>
-                <nav>
-        <a href="pagina2.html">Buscar</a>
-    </nav>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/xkjWiRQtrenqGRWO2Enry2JIl4d.jpg">
-                <h3>Popeys</h3>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg">
-                <h3>Deadpool e Wolverine</h3>
-            </div>
-
+        <div class="card">
+            <img src="img/homemaranha.jpg" alt="Homem Aranha">
+            <h2>Homem Aranha</h2>
+            <a href="#" target="_blank">
+                <button>Detalhes</button>
+            </a>
         </div>
 
     </main>
-
-    <script>
-        const searchInput = document.getElementById('searchInput');
-        const cards = document.querySelectorAll('.movie-card');
-
-        searchInput.addEventListener('keyup', () => {
-            const search = searchInput.value.toLowerCase();
-
-            cards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-
-                if(title.includes(search)){
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
